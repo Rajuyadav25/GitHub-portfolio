@@ -1,0 +1,129 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raju Yadav Nakka - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css"> <!-- AOS for animations -->
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Raju Yadav Nakka</div>
+            <ul>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li>
+                    <button id="theme-toggle">Switch Theme</button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <h1 data-aos="fade-up">Java Full Stack Developer</h1>
+        <p data-aos="fade-up" data-aos-delay="100">Specializing in building scalable and high-performance enterprise applications.</p>
+    </section>
+
+    <section id="about" class="section">
+        <h2 data-aos="fade-right">About Me</h2>
+        <p data-aos="fade-right" data-aos-delay="100">
+            I am a skilled Java Full Stack Developer with 4 years of experience. I excel in Java, Spring Boot, Angular, and ReactJS,
+            creating scalable, high-performance applications. My expertise spans backend development, API integration, and cloud technologies.
+        </p>
+    </section>
+
+    <section id="skills" class="section">
+        <h2 data-aos="fade-up">Technical Skills</h2>
+        <div class="skills" data-aos="fade-up" data-aos-delay="100">
+            <div class="skill">
+                <img src="https://upload.wikimedia.org/wikipedia/en/3/30/Java_programming_language_logo.svg" alt="Java Logo">
+                Java 8/11
+            </div>
+            <div class="skill">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Spring_Framework_Logo_2018.svg" alt="Spring Boot Logo">
+                Spring Boot
+            </div>
+            <div class="skill">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/c/cf/Angular_full_color_logo.svg" alt="Angular Logo">
+                Angular
+            </div>
+            <div class="skill">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" alt="ReactJS Logo">
+                ReactJS
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio" class="section">
+        <h2 data-aos="fade-right">Portfolio</h2>
+        <div class="portfolio-filters" data-aos="fade-up">
+            <button class="filter-btn" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="frontend">Frontend</button>
+            <button class="filter-btn" data-filter="backend">Backend</button>
+        </div>
+        <div class="projects" data-aos="fade-up" data-aos-delay="100">
+            <div class="project" data-category="frontend">
+                <h3>Project 1: Purevisitx.com</h3>
+                <p>Frontend interfaces using React.js and AWS integrations.</p>
+            </div>
+            <div class="project" data-category="backend">
+                <h3>Project 2: Lumaguard.com</h3>
+                <p>Backend APIs using Spring Boot and Angular integrations.</p>
+            </div>
+            <div class="project" data-category="frontend">
+                <h3>Project 3: Techcore.in</h3>
+                <p>UI development using XML and SOAP services.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <h2 data-aos="fade-up">Contact Me</h2>
+        <form id="contact-form" data-aos="fade-up" data-aos-delay="100">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>© 2024 Raju Yadav Nakka. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+
+        // Theme Toggle Script
+        const themeToggle = document.getElementById("theme-toggle");
+        themeToggle.addEventListener("click", () => {
+            document.body.classList.toggle("dark-theme");
+        });
+
+        // Portfolio Filtering Script
+        const filterButtons = document.querySelectorAll(".filter-btn");
+        const projects = document.querySelectorAll(".project");
+
+        filterButtons.forEach(button => {
+            button.addEventListener("click", () => {
+                const filter = button.getAttribute("data-filter");
+
+                projects.forEach(project => {
+                    if (filter === "all" || project.getAttribute("data-category") === filter) {
+                        project.style.display = "block";
+                    } else {
+                        project.style.display = "none";
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
