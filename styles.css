@@ -1,98 +1,103 @@
-/* Basic styling */
+/* Global Styles */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    transition: background-color 0.3s, color 0.3s;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #1a1a2e;
+  color: white;
+  transition: background-color 0.3s, color 0.3s;
 }
 
-.dark-theme {
-    background-color: #121212;
-    color: #ffffff;
+.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
 }
 
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    background: linear-gradient(90deg, #007BFF, #0056b3);
-    color: white;
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.6);
 }
 
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 20px;
+.navbar .logo {
+  font-size: 24px;
+  font-weight: bold;
 }
 
-nav ul li a {
-    color: white;
-    text-decoration: none;
+.navbar nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
 }
 
+.navbar nav ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+.theme-toggle {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* Hero Section */
 .hero {
-    text-align: center;
-    padding: 100px 20px;
-    background: linear-gradient(120deg, #007BFF, #6c63ff);
-    color: white;
+  text-align: center;
+  padding: 100px 20px;
+  background: linear-gradient(to bottom, #0f0c29, #302b63, #24243e);
 }
 
-.section {
-    padding: 50px 20px;
-    text-align: center;
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
 }
 
-.projects .project {
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    padding: 10px;
-    border-radius: 5px;
-    transition: transform 0.3s;
+.hero p {
+  font-size: 20px;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
-.projects .project:hover {
-    transform: scale(1.05);
+.social-links {
+  margin-top: 20px;
 }
 
-button {
-    padding: 10px;
-    border: none;
-    background: #007BFF;
-    color: white;
-    cursor: pointer;
-    transition: transform 0.3s, background-color 0.3s;
+.social-links a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #4facfe;
 }
 
-button:hover {
-    background: #0056b3;
+.social-links a:hover {
+  text-decoration: underline;
 }
 
-button:active {
-    transform: scale(0.95);
+/* About Section */
+.about {
+  padding: 50px 20px;
+  text-align: center;
+  background-color: #222831;
 }
 
-.skill img {
-    max-width: 100px; /* Adjust this value for the desired size */
-    height: auto;
-    margin: 0 auto;
-    display: block;
+.about h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
 }
 
-/* Skills section images */
-.skill img {
-    max-width: 80px; /* Adjust the size to fit the layout */
-    height: auto;
-    margin: 10px auto;
-    display: block;
-    border-radius: 5px; /* Optional: Add rounded corners for aesthetics */
+.about p {
+  font-size: 18px;
+  max-width: 700px;
+  margin: 0 auto;
 }
 
-/* Skills container alignment */
-.skills {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px; /* Space between skill items */
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #1a1a2e;
 }
