@@ -1,139 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Raju Yadav Nakka - Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css"> <!-- AOS for animations -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Raju Yadav - Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">Raju Yadav Nakka</div>
-            <ul>
-                <li><a href="#about">About Me</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li>
-                    <button id="theme-toggle">Switch Theme</button>
-                </li>
-            </ul>
-        </nav>
-    </header>
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">Raju Yadav</div>
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <button class="theme-toggle" id="themeToggle">🌙</button>
+  </header>
 
-    <section id="home" class="hero">
-        <h1 data-aos="fade-up">Java Full Stack Developer</h1>
-        <p data-aos="fade-up" data-aos-delay="100">Specializing in building scalable and high-performance enterprise applications.</p>
-    </section>
-
-    <section id="about" class="section">
-        <h2 data-aos="fade-right">About Me</h2>
-        <p data-aos="fade-right" data-aos-delay="100">
-            With 4+ years of experience as a Java Full Stack Developer, I specialize in developing enterprise-level applications using 
-            technologies like Java, Spring Boot, ReactJS, and AWS. My expertise includes designing scalable microservices, 
-            building robust APIs, and implementing secure and high-performing systems.
-        </p>
-    </section>
-
-   <section id="skills" class="section">
-    <h2 data-aos="fade-up">Technical Skills</h2>
-    <div class="skills" data-aos="fade-up" data-aos-delay="100">
-        <div class="skill">
-            <img src="https://upload.wikimedia.org/wikipedia/en/3/30/Java_programming_language_logo.svg" alt="Java Logo">
-            Java 8/11
-        </div>
-        <div class="skill">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Spring_Framework_Logo_2018.svg" alt="Spring Boot Logo">
-            Spring Boot
-        </div>
-        <div class="skill">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/c/cf/Angular_full_color_logo.svg" alt="Angular Logo">
-            Angular
-        </div>
-        <div class="skill">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" alt="ReactJS Logo">
-            ReactJS
-        </div>
-        <div class="skill">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Postgresql_elephant.svg" alt="PostgreSQL Logo">
-            PostgreSQL
-        </div>
-        <div class="skill">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/Amazon_Web_Services_Logo.svg" alt="AWS Logo">
-            AWS
-        </div>
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>I'M RAJU YADAV</h1>
+    <p>Your friendly neighborhood Java Full Stack Developer, crafting scalable and high-performance enterprise solutions. Explore my projects and interactive experiences!</p>
+    <div class="social-links">
+      <a href="https://twitter.com" target="_blank">Twitter</a>
+      <a href="https://github.com" target="_blank">GitHub</a>
+      <a href="https://linkedin.com" target="_blank">LinkedIn</a>
     </div>
-</section>
+  </section>
 
-    <section id="portfolio" class="section">
-        <h2 data-aos="fade-right">Portfolio</h2>
-        <div class="portfolio-filters" data-aos="fade-up">
-            <button class="filter-btn" data-filter="all">All</button>
-            <button class="filter-btn" data-filter="frontend">Frontend</button>
-            <button class="filter-btn" data-filter="backend">Backend</button>
-        </div>
-        <div class="projects" data-aos="fade-up" data-aos-delay="100">
-            <div class="project" data-category="frontend">
-                <h3>Project 1: Purevisitx.com</h3>
-                <p>Developed dynamic user interfaces using React.js and Redux, integrated AWS services for rapid resource provisioning, 
-                and implemented real-time order tracking.</p>
-            </div>
-            <div class="project" data-category="backend">
-                <h3>Project 2: Lumaguard.com</h3>
-                <p>Architected and implemented RESTful APIs using Spring Boot, integrated Angular for seamless UI, 
-                and optimized database interactions for improved performance.</p>
-            </div>
-            <div class="project" data-category="frontend">
-                <h3>Project 3: Techcore.in</h3>
-                <p>UI development using XML and SOAP services for enhancing the customer experience.</p>
-            </div>
-        </div>
-    </section>
+  <!-- About Section -->
+  <section id="about" class="about">
+    <h2>About Me</h2>
+    <p>With 4+ years of experience in Java Full Stack Development, I specialize in building enterprise-level applications using technologies like Java, Spring Boot, React, and AWS.</p>
+  </section>
 
-    <section id="contact" class="section">
-        <h2 data-aos="fade-up">Contact Me</h2>
-        <form id="contact-form" data-aos="fade-up" data-aos-delay="100">
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="email" name="email" placeholder="Your Email" required>
-            <textarea name="message" placeholder="Your Message" required></textarea>
-            <button type="submit">Send</button>
-        </form>
-    </section>
+  <!-- Footer -->
+  <footer>
+    <p>© 2024 Raju Yadav. All rights reserved.</p>
+  </footer>
 
-    <footer>
-        <p>© 2024 Raju Yadav Nakka. All rights reserved.</p>
-    </footer>
-
-    <script src="script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init();
-
-        // Theme Toggle Script
-        const themeToggle = document.getElementById("theme-toggle");
-        themeToggle.addEventListener("click", () => {
-            document.body.classList.toggle("dark-theme");
-        });
-
-        // Portfolio Filtering Script
-        const filterButtons = document.querySelectorAll(".filter-btn");
-        const projects = document.querySelectorAll(".project");
-
-        filterButtons.forEach(button => {
-            button.addEventListener("click", () => {
-                const filter = button.getAttribute("data-filter");
-
-                projects.forEach(project => {
-                    if (filter === "all" || project.getAttribute("data-category") === filter) {
-                        project.style.display = "block";
-                    } else {
-                        project.style.display = "none";
-                    }
-                });
-            });
-        });
-    </script>
+  <script src="script.js"></script>
 </body>
 </html>
