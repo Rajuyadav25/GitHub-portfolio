@@ -1,5 +1,6 @@
+// Theme Toggle
+const themeToggle = document.getElementById("themeToggle");
 
-document.getElementById('contact-form').addEventListener('submit', function (e) {
-    e.preventDefault();
-    alert('Thank you for your message! I will get back to you soon.');
+themeToggle.addEventListener("click", () => {
+  document.body.classList.toggle("dark-mode");
 });
