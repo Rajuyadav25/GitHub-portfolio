@@ -72,3 +72,10 @@ button:hover {
 button:active {
     transform: scale(0.95);
 }
+
+.skill img {
+    max-width: 100px; /* Adjust this value for the desired size */
+    height: auto;
+    margin: 0 auto;
+    display: block;
+}
